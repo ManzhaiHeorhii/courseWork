@@ -4,15 +4,17 @@
 ### Acceptance criteria 
 * Use jQuery lib  and jQuery UI create app, which consist two screens
 * First screen should contain start button and title, look at figure below
-
+![Screenshot 2022-09-14 at 14 31 29](https://user-images.githubusercontent.com/10829855/190143420-2a8ad2ef-513c-49bd-90f4-243efc24a12a.png)
 * the Second screen consist of two area
+![Screenshot 2022-09-14 at 14 31 36](https://user-images.githubusercontent.com/10829855/190143486-263a887e-abf6-40e7-a329-6ca64f553d69.png)
 * First area is field with 5x5 cells with image.
 * Every cell should contain image from category weapos, tanks, military equipment.
 * The order of the images must be random.
 * Second area should contain button (start again) and draggable image
+![Screenshot 2022-09-14 at 14 43 29](https://user-images.githubusercontent.com/10829855/190145003-9d2f2064-5a7a-4d8d-ab4e-cba07ec94aa2.png)
 * The player must choose current image and drag them from area two to find same img on field and drop them
 * If the player choose incorrect image, error window will popup with the message " Не вірний вибір"
-
+![Screenshot 2022-09-14 at 14 34 11](https://user-images.githubusercontent.com/10829855/190143831-9e53fcb2-1552-49b8-87e9-5fa5010cf6c5.png)
 * If user choose 10 correct images, congratulation window will popup with the message "Вітаю ви виграли"
 
 # Useful links
