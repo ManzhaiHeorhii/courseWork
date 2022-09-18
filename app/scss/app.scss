@@ -1,0 +1,146 @@
+@import "reset";
+@import "variables";
+@font-face {
+    font-family: 'Cargo';
+    src: url("../fonts/cargo.ttf");
+   }
+body{
+    background-image: url("../img/background.jpg");
+    font-family: "Anja";
+}
+.main-menu{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    &__holder{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        &__title{
+            color: white;
+            margin: auto;
+            font-size: 100px;
+            text-shadow: #000 2px 0px 2px, #000 0px 2px 2px, #000 0px -2px 2px, #000 -2px 0px 2px;
+          font-family: "Cargo";
+        }
+        &__start{
+            height: 100px;
+            width: 300px;
+            margin: 100px auto 0 auto;
+            border-style: none;
+            border-radius: 15px;
+            background-color: #116611;
+            font-family: "Cargo";
+            font-size: 24px;
+        }
+        &__start:hover{
+            background-color: #178817;
+        }
+    }
+
+}
+
+.game{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    position: relative;
+  &__popup{
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 400px;
+    background-color:#116611;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px black;
+    visibility: hidden;
+    &__text{
+      font-size: 32px;
+      text-align: center;
+      color: white;
+      width: 200px;
+      height: 100px;
+      margin: 40px auto 0px auto;
+      text-shadow: #000 2px 0px 2px, #000 0px 2px 2px, #000 0px -2px 2px, #000 -2px 0px 2px;
+      font-family: "Cargo";
+    }
+    &__ok{
+      background-color: #084008;
+      width: 100px;
+      height: 50px;
+      border-radius: 10px;
+      font-family: "Cargo";
+      border-style: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__ok:hover{
+      background-color: #178817;
+    }
+  }
+  &__field{
+    margin: auto;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    &__retry{
+      height: 100px;
+      width: 300px;
+      margin: 20px auto 0px auto;
+      border-style: none;
+      border-radius: 15px;
+      background-color: #116611;
+      font-family: "Cargo";
+      font-size: 24px;
+    }
+    &__guess{
+      height: 90px;
+      width: 90px;
+      margin: 20px auto 0px auto;
+      border-radius: 6px;
+      background-color: white;
+      box-sizing: border-box;
+      background-size: 90px 90px;
+    }
+    &__guess:hover{
+      border: solid green;
+    }
+    &__holder{
+      .stars{
+        display: flex;
+        height: 45px;
+        width: 500px;
+        margin: 0px auto 20px auto;
+        align-items: center;
+        img{
+          margin: 0px 5px 10px 0px;
+        }
+      }
+      margin: auto;
+      &__row{
+        display: flex;
+        .cell{
+          display: flex;
+          height: 90px;
+          width: 90px;
+          background-color: white;
+          margin: 5px 5px 5px 5px;
+          border-radius: 6px;
+          background-size: 90px 90px;
+          box-sizing: border-box;
+        }
+        .cell:hover{
+          background-color: #178817;
+        }
+      }
+    }
+
+  }
+}
