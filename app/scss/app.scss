@@ -4,143 +4,148 @@
     font-family: 'Cargo';
     src: url("../fonts/cargo.ttf");
    }
-body{
-    background-image: url("../img/background.jpg");
-    font-family: "Anja";
-}
-.main-menu{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    &__holder{
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        &__title{
-            color: white;
-            margin: auto;
-            font-size: 100px;
-            text-shadow: #000 2px 0px 2px, #000 0px 2px 2px, #000 0px -2px 2px, #000 -2px 0px 2px;
-          font-family: "Cargo";
-        }
-        &__start{
-            height: 100px;
-            width: 300px;
-            margin: 100px auto 0 auto;
-            border-style: none;
-            border-radius: 15px;
-            background-color: #116611;
-            font-family: "Cargo";
-            font-size: 24px;
-        }
-        &__start:hover{
-            background-color: #178817;
-        }
-    }
-
+@font-face {
+  font-family: 'Armata';
+  src: url("../fonts/Armata-Regular.ttf");
 }
 
-.game{
-    width: 100%;
-    height: 100vh;
-    display: none;
-    flex-direction: column;
-    position: relative;
-  &__popup{
-    position:absolute;
+.navbar{
+  z-index: 20;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  background-color: #00005b;
+  h1{
+    font-family: Armata;
+    font-size: 24px;
+    color: white;
+    margin: auto auto auto 40px;
+    font-weight: 900;
+  }
+}
+main{
+  background-image: url(https://www.enwallpaper.com/wp-content/uploads/2022/04/wp7064670.jpg);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  font-family: Armata;
+  .slide{
+    margin: 100px auto 10px auto;
+    .slider {
+
+      z-index: 9;
+      width: 700px;
+      height: 400px;
+      overflow: hidden;
+      margin: 0 0 7px;
+      position: relative;
+    }
+    .slider ul,
+    .slider li {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+    .slider ul {
+      width: 9999px;
+    }
+    .slider ul li {
+      list-style-type: none;
+      float: left;
+      width: 700px;
+      height: 290px;
+    }
+    .slider .nav {
+      position: absolute;
+      left: 300px;
+      bottom: 12px;
+    }
+    .slider .nav span {
+      opacity: 0.9;
+      background: #fff;
+      margin: 0 8px 0 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      overflow: hidden;
+      display: block;
+      float: left;
+      box-shadow: 0 1px 2px #000;
+    }
+    .slider .nav span.on {
+      background: #2e9419;
+    }
+  }
+  .description{
     display: flex;
     flex-direction: column;
-    height: 200px;
-    width: 400px;
-    background-color:#116611;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    left: 0;
-    right: 0;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px black;
-    visibility: hidden;
-    &__text{
-      font-size: 32px;
-      text-align: center;
-      color: white;
-      width: 200px;
-      height: 100px;
-      margin: 40px auto 0px auto;
-      text-shadow: #000 2px 0px 2px, #000 0px 2px 2px, #000 0px -2px 2px, #000 -2px 0px 2px;
-      font-family: "Cargo";
+    margin: 10px auto 10px auto;
+    width: 900px;
+    background-color: #dcdcdc;
+    h1{
+      font-size: 24px;
+      margin: 0px auto 10px auto;
+      font-weight: 900;
     }
-    &__ok{
-      background-color: #084008;
-      width: 100px;
-      height: 50px;
-      border-radius: 10px;
-      font-family: "Cargo";
-      border-style: none;
+    h2{
+      font-size: 18px;
+      margin: 0px auto 10px 30px;
+      font-weight: 600;
+    }
+    ul{
+      width: 500px;
       margin-left: auto;
       margin-right: auto;
     }
-    &__ok:hover{
-      background-color: #178817;
+    li{
+      font-size: 18px;
     }
-  }
-  &__field{
-    margin: auto;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    &__retry{
-      height: 100px;
-      width: 300px;
-      margin: 20px auto 0px auto;
-      border-style: none;
-      border-radius: 15px;
-      background-color: #116611;
-      font-family: "Cargo";
-      font-size: 24px;
+    .star{
+      height: 30px;
+      width: 30px;
     }
-    &__guess{
-      height: 90px;
-      width: 90px;
-      margin: 20px auto 0px auto;
-      border-radius: 6px;
-      background-color: white;
-      box-sizing: border-box;
-      background-size: 90px 90px;
-    }
-    &__guess:hover{
-      border: solid green;
-    }
-    &__holder{
-      .stars{
+    .send{
+      border-radius: 10px;
+      margin: 100px auto 30px auto;
+      height: 300px;
+      width: 500px;
+      background-color: #676767;
+      form{
+        height: 100%;
         display: flex;
-        height: 45px;
-        width: 500px;
-        margin: 0px auto 20px auto;
-        align-items: center;
-        img{
-          margin: 0px 5px 10px 0px;
+        flex-direction: column;
+        label{
+          width: 300px;
+          text-align: center;
+          margin: 30px auto 30px auto;
+          font-size: 32px;
+          font-weight: bold;
         }
-      }
-      margin: auto;
-      &__row{
-        display: flex;
-        .cell{
-          display: flex;
-          height: 90px;
-          width: 90px;
-          background-color: white;
-          margin: 5px 5px 5px 5px;
-          border-radius: 6px;
-          background-size: 90px 90px;
-          box-sizing: border-box;
+        .email{
+          height: 40px;
+          width: 300px;
+          font-size: 24px;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 10px;
         }
-        .cell:hover{
-          background-color: #178817;
+        .submit{
+          margin: auto auto 30px auto ;
+          border:none;
+          height: 70px;
+          width: 150px;
+          border-radius: 10px;
+          background-color: #00005b;
+          font-size: 32px;
+          color: white;
+          font-weight: 800;
+        }
+        .submit:hover{
+          background-color: #0101bd;
         }
       }
     }
-
   }
 }
